@@ -57,6 +57,7 @@ print(relevant_documents[0].page_content)
 retriever = vectorstore.as_retriever(search_type="similarity", search_kwargs={"k": 3})
 query = """What were the trends in median household income across different states in the United States between 2021 and 2022."""  # Sample question, change to other questions you are interested in.
 relevant_documents = vectorstore.similarity_search(query)
+
 print(f'There are {len(relevant_documents)} documents retrieved which are relevant to the query. Display the first one:\n')
 print(relevant_documents[0].page_content)
 
